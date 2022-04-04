@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.note-area {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+textarea {
+  border: 3px solid black;
+}
+
+.note-area :nth-child(1) {
+  margin: 10px;
+}
+
+input {
+  width: 60%;
+  background-color: #e7edef;
+  border: 3px solid black;
+  font-size: 1em;
+}
+
+.ranking {
+  width: 9%;
+}
+
+.note-content {
+  height: 70%;
+  width: 80%;
+  background-color: #e7edef;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+input {
+  border-radius: 10px;
+}
+
+.btn-container {
+  width: 100%;
+  display: inline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  display: inline-block;
+  background-color: #e7edef;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: black;
+  text-align: center;
+  font-size: 0.9em;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 25px;
+  width: 15%;
+  border: 3px solid black;
+  margin-right: 9px;
+}
+
+button:hover {
+  background-color: #d2dddf;
+}
+
+.saved-notes {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin-right: 20px;
+  overflow: scroll;
+  justify-content: start;
+  height: 60%;
+  margin-top: 20%;
+}
+
+.saved-note,
+.clicked,
+.double-clicked {
+  font-size: 0.9em;
+  width: 100%;
+  background-color: #e7edef;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 25px;
+  transition: width 1s;
+  -moz-user-select: none;
+  text-decoration: blink;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+p:hover {
+  background-color: black;
+}
+
+.saved-note clicked {
+  background-color: #99e319;
+}
+
+.saved-note double-clicked {
+  background-color: #e7edef;
+  width: 80%;
+  color: red;
+}
+
+.top-img {
+  position: absolute;
+  right: 0;
+  width: 12%;
+  margin-top: 20px;
+  margin-right: 60px;
+  cursor: pointer;
+}
+
+.bottom-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 7%;
+  margin-right: 80px;
+  margin-bottom: 50px;
+}
+
+.top-img:hover {
+  animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
